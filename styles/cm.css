@@ -1,0 +1,258 @@
+/* font-family: 'IBM Plex Sans Condensed', sans-serif; */
+
+body{
+    margin: 0;
+    position: relative;
+    font-family: 'IBM Plex Sans Condensed', sans-serif; 
+    overflow: hidden;
+    perspective: 800px;
+}
+/*  RESET */
+a{
+    text-decoration: none;
+}
+
+
+
+/* MAIN CONTENT */
+main{
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+    main .menu{
+        height: 100vh;
+        width: calc(100vw/3);
+        position: relative;
+    }
+        main .menu img{
+            width: 100%;
+            height: 100%;
+        }
+        main .menu .flou{
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0, 0.4);
+            text-align: center;
+
+        }
+        main .menu .flou .content{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            animation-name: cm-info;
+            animation-delay: 1s;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+        }
+            main .menu .flou .content .rect{
+                width: 60%;
+                display: inline-block;
+                background-color: red;
+                padding: 10px;
+
+            }
+            main .menu .flou .content .top{
+                display: flex;
+                flex-direction: column;
+            }
+                main .menu .flou .content .top .project-list{
+                    margin-bottom: 20px;
+                }
+                main .menu .flou .content .top h1{
+                    font-size: 26px;
+                    color: black;
+                    margin-bottom: 50px;
+                    
+
+                    background-color: #fff;
+                }
+                main .menu .flou .content .top span{
+                    font-size: 22px;
+                    color: white;
+                    cursor: pointer;
+                }
+                    main .menu .flou .content .top span.selected{
+                        border-bottom: 1px solid white;
+                    }
+            main .menu .flou .content .bottom{
+                display: flex;
+                flex-direction: column;
+            }
+                main .menu .flou .content .bottom a{
+                    margin-bottom: 30px;  
+                    font-size: 22px;  
+                    background-color: black;
+                    color: white;
+                }
+                main .menu .flou .content .bottom a:hover{
+                    border: 1px solid white;
+
+                }
+
+        
+/* SOCIAL */
+.social{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+    .social img{
+        width: 60%;
+        height: 60%;
+        stroke: white;
+    }
+    .social.behance{
+        top:0;
+        right: 0;
+    }
+    .social.linkedin{
+        bottom: 0;
+        left: 0;
+
+        animation-name: social;
+        animation-delay: 1s;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+    }
+@keyframes social{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(100vw/3));
+    }
+}
+/* SECTION CM */
+section.cm{
+    height: 100vh;
+    width: calc(2*100vw/3);
+    position: absolute;
+    background-color: #fff;
+    top:0;
+    right:0;
+    transform: translateX(100%);
+
+    display: flex;
+    justify-content: center;
+
+    animation-name: cm-block;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+    section.cm .project{
+        width: 80%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+        
+        section.cm .project.synerg{
+            display: none;
+        }
+        section.cm .project.no-disk {
+            display: none;
+        }
+        section.cm .project.show{
+            display: block;
+        }
+    section.cm .project .media{
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+        section.cm .project .media img{
+            width: 20px;
+            height: 20px;
+            vertical-align: text-top;
+            margin-bottom: 10px;
+        }
+        section.cm .project .media span{
+            margin-left: 20px;
+            font-weight: 300;
+        }
+        section.cm .project.synerg .media span{
+            color: #511298;
+        }
+        section.cm .project.no-disk .media span{
+            color:#5ACFB0; ;
+        }
+        section.cm .project .logo{
+            text-align: center;
+        }
+            section.cm .project.synerg .logo img{
+                clip-path: circle(50px);
+                margin: auto;
+            }
+            section.cm .project.no-disk .logo img{
+                height: 100px;;
+                margin: auto;
+            }
+        section.cm .project h1{
+            font-size: 42px;
+            margin-top:0;
+            margin-bottom: 20px;
+        }
+        section.cm .project span{
+            font-size: 18px;
+            font-weight: 100;
+        }
+        section.cm .project p{
+            font-size: 18px;
+            margin: 8px 0;
+        }
+        section.cm .project h2{
+            font-size: 26px;
+            margin-top: 40px;
+        }
+        section.cm .project .work{
+            margin-top: 20px;
+        }
+            section.cm .project .work div{
+                margin-bottom: 10px;
+            }
+                section.cm .project .work div img{
+                    width: 20px;
+                    height: 20px;
+                    vertical-align: text-top;
+                    margin-bottom: 10px;
+                }
+                section.cm .project .work div span{
+                    margin-left: 20px;
+                    font-size: 18px;
+                    font-weight: 300;
+                }
+
+
+
+/* animation for section cm */
+@keyframes cm-block{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes cm-info{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
