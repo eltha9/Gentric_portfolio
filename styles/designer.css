@@ -1,0 +1,179 @@
+/* font-family: 'IBM Plex Sans Condensed', sans-serif; */
+
+body{
+    margin: 0;
+    position: relative;
+    font-family: 'IBM Plex Sans Condensed', sans-serif; 
+    overflow: hidden;
+    perspective: 800px;
+}
+/*  RESET */
+a{
+    text-decoration: none;
+}
+
+
+
+/* MAIN CONTENT */
+main{
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+    main .menu{
+        height: 100vh;
+        width: calc(100vw/3);
+        position: relative;
+    }
+        main .menu img{
+            width: 100%;
+            height: 100%;
+        }
+        main .menu .flou{
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0, 0.4);
+            text-align: center;
+
+        }
+        main .menu .flou .content{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            animation-name: design-info;
+            animation-delay: 1s;
+            animation-duration: 3s;
+            animation-fill-mode: forwards; 
+        }
+            main .menu .flou .content .rect{
+                width: 60%;
+                display: inline-block;
+                padding: 10px;
+
+            }
+                main .menu .flou .content .top .project-list{
+                    margin-bottom: 20px;
+                }
+                main .menu .flou .content .top h1{
+                    font-size: 26px;
+                    color: black;
+                    margin-bottom: 50px;
+
+                    background-color: #fff;
+                }
+                
+            main .menu .flou .content .bottom{
+                display: flex;
+                flex-direction: column;
+            }
+                main .menu .flou .content .bottom a{
+                    margin-bottom: 30px;  
+                    font-size: 22px;  
+                    background-color: black;
+                    color: white;
+                }
+                main .menu .flou .content .bottom a:hover{
+                    border: 1px solid white;
+
+                }
+
+        
+/* SOCIAL */
+.social{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+    .social img{
+        width: 60%;
+        height: 60%;
+        stroke: white;
+    }
+    .social.behance{
+        top:0;
+        right: 0;
+        animation-name: social;
+        animation-delay: 1s;
+        animation-duration: 3s;
+        animation-fill-mode: forwards; 
+    }
+    .social.linkedin{
+        bottom: 0;
+        left: 0;
+
+    }
+@keyframes social{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-100vw/3));
+    }
+}
+/* SECTION CM */
+section.design{
+    height: 100vh;
+    width: calc(2*100vw/3);
+    position: absolute;
+    background-color: #fff;
+    top:0;
+    left:0;
+    transform: translateX(-100%);
+
+    display: flex;
+    justify-content: center;
+
+    animation-name: design-block;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+    section.design .content{
+        width: 80%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: stretch;
+    }
+        section.design .content .item{
+            width: 30vmin;
+            height: 30vmin;
+
+        }
+            section.design .content .item img{
+                width: 100%;
+                height: 100%;
+            }
+
+
+/* animation for section cm */
+@keyframes design-block{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes design-info{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
