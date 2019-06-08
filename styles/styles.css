@@ -1,0 +1,138 @@
+/* font-family: 'IBM Plex Sans Condensed', sans-serif; */
+
+body{
+    margin: 0;
+    position: relative;
+    font-family: 'IBM Plex Sans Condensed', sans-serif; 
+    overflow: hidden;
+}
+/*  RESET */
+a{
+    text-decoration: none;
+}
+
+/* MAIN TITLE */
+.title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    line-height: 100%;
+    text-align: center;
+    animation-name: first;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes first{
+    0%{
+        opacity: 0;
+    }
+    15%{
+        opacity: 0.9;
+    }
+    25%{
+        opacity: 1;
+    }
+    50%{
+        top: 50%;
+        left: 50%;
+        opacity: 1;
+    }
+    100%{
+        top: 10%;
+        left: 50%;
+        opacity: 1;
+    }
+}
+    .title h3{
+        font-size: 22px;
+        font-weight: 300;
+    }
+    .title h1{
+        font-size: 42px;
+        text-transform: uppercase;
+    }
+    .title h2{
+        font-size: 26px;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+
+/* MAIN CONTENT */
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+    main .menu{
+        height: 100vh;
+        width: calc(100vw/3);
+        position: relative;
+    }
+        main .menu img{
+            width: 100%;
+            height: 100%;
+        }
+        main .menu .flou{
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0, 0.4);
+
+        }
+        main .menu .sub-title{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            text-align: center;
+            background-color: black;
+            color: white;
+            
+        }
+            main .menu .sub-title a{
+                font-size: 22px;
+                font-weight: 500;
+                text-transform: capitalize;
+            }
+        main .menu:hover .flou{
+            display: none;
+        }
+        main .menu:hover .sub-title{
+            display: block;
+        }
+
+
+/* SOCIAL */
+.social{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+    .social img{
+        width: 60%;
+        height: 60%;
+        stroke: white;
+    }
+    .social.behance{
+        top:0;
+        right: 0;
+    }
+    .social.linkedin{
+        bottom: 0;
+        left: 0;
+    }
+
