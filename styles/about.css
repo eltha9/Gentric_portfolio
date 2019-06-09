@@ -170,7 +170,9 @@ section.about{
             flex-direction: column;
             padding-left: 20px;
         }
-    
+            section.about .content .contact a{
+                color: black;
+            }
 
 
 /* animation for section cm */
