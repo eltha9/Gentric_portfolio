@@ -155,7 +155,7 @@ section.design{
         section.design .content .item{
             width: 30vmin;
             height: 30vmin;
-            border: 1px solid gray;
+            border: 2px solid gray;
             margin-right: 15px;
             margin-bottom: 15px;
 

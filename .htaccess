@@ -1,6 +1,7 @@
 RewriteEngine On
 
 RewriteRule ^$ index.html
+RewriteRule ^home$ index.html
 RewriteRule ^about$ about.html
 RewriteRule ^community$ cm.html
 RewriteRule ^designer$ designer.html
