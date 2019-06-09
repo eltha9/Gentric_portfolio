@@ -50,7 +50,7 @@ main{
             opacity: 0;
             animation-name: design-info;
             animation-delay: 1s;
-            animation-duration: 3s;
+            animation-duration: 2s;
             animation-fill-mode: forwards; 
         }
             main .menu .flou .content .rect{
@@ -107,7 +107,7 @@ main{
         right: 0;
         animation-name: social;
         animation-delay: 1s;
-        animation-duration: 3s;
+        animation-duration: 2s;
         animation-fill-mode: forwards; 
     }
     .social.linkedin{
@@ -160,6 +160,9 @@ section.design{
             margin-bottom: 15px;
 
         }
+            section.design .content .item.empty{
+                border: none;
+            }
             section.design .content .item img{
                 width: 100%;
                 height: 100%;
