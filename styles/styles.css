@@ -85,6 +85,11 @@ main{
             height: 100%;
             background-color: rgba(0,0,0, 0.4);
 
+            opacity: 1;
+            transition-property: opacity;
+            transition-duration: 1s;
+            transition-timing-function: ease;
+
         }
         main .menu .sub-title{
             position: absolute;
@@ -96,6 +101,10 @@ main{
             text-align: center;
             background-color: black;
             color: white;
+            opacity: 0;
+            transition-property: opacity;
+            transition-duration: 1s;
+            transition-timing-function: ease;
             
         }
             main .menu .sub-title a{
@@ -104,10 +113,12 @@ main{
                 text-transform: capitalize;
             }
         main .menu:hover .flou{
-            display: none;
+            /* display: none; */
+            opacity: 0;
         }
         main .menu:hover .sub-title{
-            display: block;
+            display: block; 
+            opacity: 1;
         }
 
 

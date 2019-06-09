@@ -141,29 +141,7 @@ section.design{
     animation-duration: 3s;
     animation-fill-mode: forwards;
 }
-    section.design .content{
-        width: 80%;
-        height: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: stretch;
-        align-items: stretch;
-        overflow-y: scroll;
-        padding-top: 20px;
-    }
-        section.design .content .item{
-            width: 30vmin;
-            height: 30vmin;
-            border: 1px solid gray;
-            margin-right: 15px;
-            margin-bottom: 15px;
-
-        }
-            section.design .content .item img{
-                width: 100%;
-                height: 100%;
-            }
+    
 
 
 /* animation for section cm */
